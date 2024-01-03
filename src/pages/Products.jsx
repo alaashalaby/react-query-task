@@ -6,7 +6,7 @@ import { useQuery } from "@tanstack/react-query";
 import SkeletonLoading from "../components/SkeletonLoading";
 const Products = () => {
   useTitle("Products");
-  const {id}=useParams()
+  const { id } = useParams()
   const getProducts = (id) => {
     return axios.get(`https://api.escuelajs.co/api/v1/products/?categoryId=${id}`);
   }
