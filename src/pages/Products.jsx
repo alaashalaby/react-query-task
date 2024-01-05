@@ -25,7 +25,7 @@ const Products = () => {
         <Container maxW="6xl" mt={7} p={3}>
           <SimpleGrid columns={{ base: 1, md: 2, lg: 4 }} gap={8}>
             {isLoading ? (
-              <SkeletonLoading />
+             Array.from({length:8}).map((_,index)=><SkeletonLoading key={index}/>)
             ) : (
               <>
                 {products?.data.map((product) => (

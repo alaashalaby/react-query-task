@@ -5,7 +5,13 @@ const Home = () => {
     useTitle("Home");
   return (
     <Box mt={5}>
-      <Heading textAlign="center" fontSize="3xl" color="tan" fontWeight={500}>
+      <Heading
+        as="h1"
+        textAlign="center"
+        fontSize="3xl"
+        color="tan"
+        fontWeight={500}
+      >
         Home
       </Heading>
     </Box>
