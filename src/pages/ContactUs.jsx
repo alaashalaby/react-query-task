@@ -11,15 +11,15 @@ import {
 } from "@chakra-ui/react";
 import useTitle from "../Hook/useTitle";
 import { ErrorMessage, Formik } from "formik";
-import * as Yup from "yup"
+import * as Yup from "yup";
 const ContactUs = () => {
-    useTitle("Contact Us");
+  useTitle("Contact Us");
   const initialValues = {
     firstName: "",
     lastName: "",
     email: "",
-    message:""
-  }
+    message: "",
+  };
   const validationSchema = Yup.object({
     firstName: Yup.string().required("First Name is Required"),
     lastName: Yup.string().required("Last Name is Required"),
@@ -61,15 +61,13 @@ const ContactUs = () => {
                   id="firstName"
                   {...formik.getFieldProps("firstName")}
                 />
-                {formik.errors.firstName && formik.touched.firstName ? (
-                  <ErrorMessage name="firstName">
-                    {(msg) => (
-                      <Text mt={2} ms={2} color="red" fontSize="13px">
-                        {msg}
-                      </Text>
-                    )}
-                  </ErrorMessage>
-                ) : null}
+                <ErrorMessage name="firstName">
+                  {(msg) => (
+                    <Text mt={2} ms={2} color="red" fontSize="13px">
+                      {msg}
+                    </Text>
+                  )}
+                </ErrorMessage>
               </FormControl>
               <FormControl
                 mb={3}
@@ -82,15 +80,14 @@ const ContactUs = () => {
                   id="lastName"
                   {...formik.getFieldProps("lastName")}
                 />
-                {formik.errors.lastName && formik.touched.lastName ? (
-                  <ErrorMessage name="lastName">
-                    {(msg) => (
-                      <Text mt={2} ms={2} color="red" fontSize="13px">
-                        {msg}
-                      </Text>
-                    )}
-                  </ErrorMessage>
-                ) : null}
+
+                <ErrorMessage name="lastName">
+                  {(msg) => (
+                    <Text mt={2} ms={2} color="red" fontSize="13px">
+                      {msg}
+                    </Text>
+                  )}
+                </ErrorMessage>
               </FormControl>
               <FormControl
                 mb={3}
@@ -103,15 +100,13 @@ const ContactUs = () => {
                   id="email"
                   {...formik.getFieldProps("email")}
                 />
-                {formik.errors.email && formik.touched.email ? (
-                  <ErrorMessage name="email">
-                    {(msg) => (
-                      <Text mt={2} ms={2} color="red" fontSize="13px">
-                        {msg}
-                      </Text>
-                    )}
-                  </ErrorMessage>
-                ) : null}
+                <ErrorMessage name="email">
+                  {(msg) => (
+                    <Text mt={2} ms={2} color="red" fontSize="13px">
+                      {msg}
+                    </Text>
+                  )}
+                </ErrorMessage>
               </FormControl>
               <FormControl
                 mb={3}
@@ -125,15 +120,13 @@ const ContactUs = () => {
                   id="message"
                   {...formik.getFieldProps("message")}
                 />
-                {formik.errors.message && formik.touched.message ? (
-                  <ErrorMessage name="message">
-                    {(msg) => (
-                      <Text mt={2} ms={2} color="red" fontSize="13px">
-                        {msg}
-                      </Text>
-                    )}
-                  </ErrorMessage>
-                ) : null}
+                <ErrorMessage name="message">
+                  {(msg) => (
+                    <Text mt={2} ms={2} color="red" fontSize="13px">
+                      {msg}
+                    </Text>
+                  )}
+                </ErrorMessage>
               </FormControl>
               <FormControl mb={3}>
                 <Button
@@ -152,6 +145,6 @@ const ContactUs = () => {
       )}
     </Formik>
   );
-}
+};
 
-export default ContactUs
+export default ContactUs;
